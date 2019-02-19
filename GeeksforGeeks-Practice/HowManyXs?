@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T, X, L, U;
+	cin >> T;
+	while(T--)
+	{
+	    cin >> X >> L >> U;
+	    int count = 0;
+	    for(int i = L+1; i < U; i++)
+	    {
+	        int a = i;
+	        while(a)
+	        {
+	            if(a % 10 == X) count++;
+	            a = a/10;
+	        }
+	    }
+	    cout << count << endl;
+	}
+	return 0;
+}
